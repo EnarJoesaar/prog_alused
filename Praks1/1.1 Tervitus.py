@@ -1,2 +1,2 @@
 # teksti väljastamine
-print("Tere!")
+print("Tere maailm!")
