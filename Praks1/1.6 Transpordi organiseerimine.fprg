@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Enar"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-19 09:27:09 AM"/>
+        <attribute name="created" value="RW5hcjtERVNLVE9QLVJHSDM4MVQ7MjAyMS0xMC0xOTswODo1MzoyOSBBTTsyNzEw"/>
+        <attribute name="edited" value="RW5hcjtERVNLVE9QLVJHSDM4MVQ7MjAyMS0xMC0xOTswOToyNzowOSBBTTsxOzI4MTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Sisesta inimeste arv:&quot;" newline="True"/>
+            <declare name="inimestearv" type="Integer" array="False" size=""/>
+            <input variable="inimestearv"/>
+            <output expression="&quot;Sisesta kohtade arv &#252;hes bussis:&quot;" newline="True"/>
+            <declare name="kohtadearv" type="Integer" array="False" size=""/>
+            <input variable="kohtadearv"/>
+            <declare name="bussid" type="Integer" array="False" size=""/>
+            <assign variable="bussid" expression="inimestearv / kohtadearv"/>
+            <declare name="mahajaanud" type="Integer" array="False" size=""/>
+            <assign variable="mahajaanud" expression="inimestearv % kohtadearv"/>
+            <if expression="mahaj&#228;&#228;nud &gt; 0">
+                <then>
+                    <assign variable="bussid" expression="bussid + 1"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;Tuleb tellida &quot; &amp; bussid &amp; &quot;bussi&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
